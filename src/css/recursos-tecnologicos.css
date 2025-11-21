@@ -1,0 +1,550 @@
+/* ========================================
+   REINICIO Y ESTILOS GLOBALES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Poppins', 'Avenir Next Arabic', 'Mukti', sans-serif;
+    background-color: #F3F4F6;
+    color: #011A42;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input {
+    font-family: inherit;
+}
+
+/* ========================================
+   MENÚ LATERAL (ASIDE)
+   ======================================== */
+
+/* --- Contenedor Principal del Menú --- */
+.menu-lateral {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #FFFFFF; /* --blanco */
+    border-right: 1px solid #E5E7EB; /* --color-borde */
+    
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+}
+
+/* --- Cabecera (Logo) --- */
+.menu-lateral-cabecera {
+    margin-bottom: 40;
+    padding-left: 8px;
+}
+
+.menu-lateral-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #CFCFCF; /* --gris-metalico-claro */
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Navegación (Enlaces) --- */
+.menu-lateral-navegacion {
+    flex-grow: 1;
+}
+
+.menu-lateral-lista {
+    border-top: 1px solid #E5E7EB;
+    margin-top: 60px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.menu-lateral-enlace {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* Espacio entre el icono y el texto */
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #011A42; /* --color-texto-secundario */
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/*
+ * ==== ¡NUEVA REGLA! ====
+ * Placeholder para los iconos del menú
+ */
+.menu-lateral-icono {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(600%) hue-rotate(200deg);
+    /* Color temporal para ver el espacio */
+   
+    
+}
+
+.menu-lateral-icono-perfil{
+    width: 20px;
+    height: 20px;
+    
+
+}
+.menu-lateral-icono-tecnologia {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-lateral-icono-cerrar-sesion {
+ width: 20px;
+ height: 20px;
+}
+
+.menu-lateral-enlace:hover {
+    background-color: #011A42; /* --color-fondo-app */
+}
+
+.menu-lateral-item-activo .menu-lateral-enlace {
+    background-color: #011A42; /* --azul-marino-oscuro */
+    color: #FFFFFF; /* --blanco */
+}
+
+/* Icono activo (se vuelve blanco) */
+.menu-lateral-item-activo .menu-lateral-icono {
+    background-color: #FFFFFF; /* --blanco */
+}
+
+.menu-lateral-enlace-con-notificacion {
+    position: relative;
+}
+
+.menu-lateral-notificacion {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #D49D28; /* --mostaza-dorado */
+    color: #AA700F; /* --marron-tierra */
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+
+/* --- Pie de Menú (Usuario y Cerrar Sesión) --- */
+.menu-lateral-pie {
+    border-top: 1px solid #E5E7EB; /* --color-borde */
+    padding-top: 24px;
+    
+}
+
+.menu-lateral-usuario-actual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    background-color: #F8CD86;
+    padding: 17px;
+    border-radius: 16px;
+    opacity: 0.3;
+}
+
+.menu-lateral-usuario-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover
+    
+}
+
+.menu-lateral-usuario-info {
+    font-size: 14px;
+}
+
+.menu-lateral-usuario-nombre {
+    font-weight: 600;
+    color: #011A42; /* --color-texto-principal */
+}
+
+.menu-lateral-usuario-rol {
+    color: #6B7280; /* --color-texto-secundario */
+    font-size: 13px;
+}
+
+.menu-lateral-cerrar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* Espacio para el icono */
+    color: #6B7280; /* --color-texto-secundario */
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.menu-lateral-cerrar-sesion:hover {
+    background-color: #F9FAFB; /* --color-fondo-app */
+}
+
+.menu-lateral-cerrar-sesion-parrafo {
+    color: #BD2222;
+}
+
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+.contenido-principal {
+    margin-left: 300px;
+    padding: 32px;
+    min-height: 100vh;
+}
+
+/* --- Cabecera del Contenido Principal --- */
+
+.contenido-principal-cabecera {
+    margin-bottom: 24px;
+}
+
+.contenido-principal-titulo {
+   font-size: 34px;
+    font-weight: 700;
+    color: #011A42; /* --azul-marino-oscuro */
+    margin-bottom: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+.contenido-cabecera-subtitulo {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6B7280; /* --color-texto-secundario */
+    margin-top: 6px;
+}
+
+.contenido-principal-cabecera-controles {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.contenido-principal-buscador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f1eded;
+    border: 1px solid #f1eded;
+    border-radius: 8px;
+    padding: 10px 16px;
+    flex-grow: 1;
+}
+
+.contenido-principal-buscador-icono {
+    width: 18px;
+    height: 18px;
+}
+
+.contenido-principal-buscador-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #011A42;
+    background-color:#f1eded;
+    border-radius: 8px;;
+}
+
+.contenido-principal-buscador-input::placeholder {
+    color: #D1D5DB;
+}
+
+.contenido-principal-filtro-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #f1eded;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #011A42;
+}
+
+.contenido-principal-filtro-dropdown-icono {
+    width: 18px;
+    height: 18px;
+}
+
+.contenido-principal-filtro-dropdown-texto {
+    font-weight: 500;
+}
+
+/* --- Estadísticas del Contenido Principal --- */
+
+.contenido-principal-estadisticas {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.estadistica-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.estadistica-card-icono {
+    width: 30px;
+    height: 30px;
+}
+
+.estadistica-card-numero {
+    font-size: 16px;
+    font-weight: 700;
+    color: #011A42;
+    line-height: 1;
+}
+
+.estadistica-card-texto {
+    font-size: 13px;
+    color: #9CA3AF;
+    text-align: center;
+}
+
+/* --- Información del Contenido Principal --- */
+
+.contenido-principal-informacion {
+    margin-bottom: 16px;
+}
+
+.contenido-principal-informacion-texto {
+    font-size: 13px;
+    color: #9CA3AF;
+}
+
+/* --- Equipos del Contenido Principal --- */
+
+.contenido-principal-equipos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ========================================
+   TARJETAS DE EQUIPOS
+   ======================================== */
+
+.tarjeta-equipo {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    width: calc(33.333% - 14px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Cabecera de Tarjeta de Equipo --- */
+
+.tarjeta-equipo-cabecera {
+    background-color: #000000;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    position: relative;
+}
+
+.tarjeta-equipo-imagen {
+
+  height: 180px;
+  width:100%;
+  object-fit: contain;
+ 
+
+  
+  
+
+  
+   
+}
+
+.tarjeta-equipo-icono-categoria {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-equipo-icono-categoria-imagen {
+    width: 20px;
+    height: 20px;
+}
+
+.tarjeta-equipo-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.tarjeta-equipo-badge-disponible {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+
+.tarjeta-equipo-badge-no-disponible {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+/* --- Contenido de Tarjeta de Equipo --- */
+
+.tarjeta-equipo-contenido {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tarjeta-equipo-titulo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #011A42;
+    margin-bottom: 2px;
+}
+
+.tarjeta-equipo-especificaciones {
+    font-size: 12px;
+    color: #9CA3AF;
+    margin-bottom: 6px;
+}
+
+.tarjeta-equipo-descripcion {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.tarjeta-equipo-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.tarjeta-equipo-detalles-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta-equipo-detalles-label {
+    font-size: 12px;
+    color: #9CA3AF;
+}
+
+.tarjeta-equipo-detalles-valor {
+    font-size: 12px;
+    color: #011A42;
+    font-weight: 600;
+}
+
+.tarjeta-equipo-detalles-valor-disponible {
+    color: #059669;
+}
+
+.tarjeta-equipo-detalles-valor-no-disponible {
+    color: #DC2626;
+}
+
+/* --- Pie de Tarjeta de Equipo --- */
+
+.tarjeta-equipo-pie {
+    padding: 16px;
+    border-top: 1px solid #F3F4F6;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-equipo-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.tarjeta-equipo-boton-reservar {
+    background-color: #011A42;
+    color: #FFFFFF;
+}
+
+.tarjeta-equipo-boton-reservar:hover {
+    background-color: #0A387A;
+}
+
+.tarjeta-equipo-boton-lista-espera {
+    background-color: #9CA3AF;
+    color: #FFFFFF;
+}
+
+.tarjeta-equipo-boton-lista-espera:hover {
+    background-color: #6B7280;
+}
+
+.tarjeta-equipo-boton-icono {
+    width: 16px;
+    height: 16px;
+}
+
+.tarjeta-equipo-boton-texto {
+    font-weight: 600;
+}

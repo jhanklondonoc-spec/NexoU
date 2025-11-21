@@ -105,9 +105,17 @@ ESTILOS DEL MENÚ LATERAL (ASIDE)
 .menu-lateral-icono {
     width: 20px;
     height: 20px;
-    filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(600%) hue-rotate(200deg);;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(600%) hue-rotate(200deg);
     /* Color temporal para ver el espacio */
    
+    
+}
+
+.menu-lateral-icono-tecnologia{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    /* Color temporal para ver el espacio */
     
 }
 
@@ -241,6 +249,8 @@ ESTILOS DEL CONTENIDO PRINCIPAL (MAIN)
     font-weight: 400;
     color: #6B7280; /* --color-texto-secundario */
 }
+
+
 
 /* --- Layout de Columnas --- */
 .perfil-columnas {
